@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "menu": "Menu",
+        "cart": "Cart",
+        "home": "Home",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "close": "Close"
+    },
+    "home": {
+        "welcome": "Welcome to UMAI",
+        "subtitle": "Discover our exquisite modern cuisine.",
+        "cta": "View Menu"
+    },
+    "menu": {
+        "title": "Our Menu",
+        "add_to_cart": "Add",
+        "search": "Looking for...",
+        "search_btn": "Search",
+        "all_categories": "All",
+        "categories": {
+            "special_menu": "Special Menu",
+            "breakfasts_eggs": "Breakfasts • Salads • Starters",
+            "eggs": "Eggs",
+            "house_bread_specials": "House Bread Specials"
+        }
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is currently empty.",
+        "total": "Total",
+        "checkout": "Checkout",
+        "success": "Order placed successfully!"
+    }
+}

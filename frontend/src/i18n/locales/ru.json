@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "menu": "Меню",
+        "cart": "Корзина",
+        "home": "Главная",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "close": "Закрыть"
+    },
+    "home": {
+        "welcome": "Добро пожаловать в UMAI",
+        "subtitle": "Откройте для себя нашу изысканную современную кухню.",
+        "cta": "Посмотреть меню"
+    },
+    "menu": {
+        "title": "Наше меню",
+        "add_to_cart": "Добавить",
+        "search": "Искать блюдо...",
+        "search_btn": "Найти",
+        "all_categories": "Все",
+        "categories": {
+            "special_menu": "Специальное меню",
+            "breakfasts_eggs": "Завтраки • Салаты • Закуски",
+            "eggs": "Яйца",
+            "house_bread_specials": "Фирменный хлеб"
+        }
+    },
+    "cart": {
+        "title": "Ваша корзина",
+        "empty": "Ваша корзина пуста.",
+        "total": "Итого",
+        "checkout": "Оформить заказ",
+        "success": "Заказ успешно оформлен!"
+    }
+}

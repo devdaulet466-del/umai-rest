@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "menu": "Мәзір",
+        "cart": "Себет",
+        "home": "Басты бет",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "close": "Жабу"
+    },
+    "home": {
+        "welcome": "UMAI-ға қош келдіңіз",
+        "subtitle": "Біздің заманауи тағамдарымыздың дәмін татыңыз.",
+        "cta": "Мәзірді көру"
+    },
+    "menu": {
+        "title": "Біздің мәзір",
+        "add_to_cart": "Қосу",
+        "search": "Тағамды іздеу...",
+        "search_btn": "Іздеу",
+        "all_categories": "Барлығы",
+        "categories": {
+            "special_menu": "Арнайы мәзір",
+            "breakfasts_eggs": "Таңғы ас • Салаттар • Тіскебасарлар",
+            "eggs": "Жұмыртқа",
+            "house_bread_specials": "Фирмалық нан"
+        }
+    },
+    "cart": {
+        "title": "Сіздің себетіңіз",
+        "empty": "Себетіңіз бос.",
+        "total": "Барлығы",
+        "checkout": "Тапсырыс беру",
+        "success": "Тапсырыс сәтті рәсімделді!"
+    }
+}
