@@ -103,6 +103,11 @@
             <h2 class="modal-title">{{ selectedDish.name[$i18n.locale] }}</h2>
             <p v-if="selectedDish.weight" class="modal-weight">{{ selectedDish.weight }}</p>
             <p v-if="selectedDish.description" class="modal-desc">{{ selectedDish.description[$i18n.locale] }}</p>
+
+            <div v-if="selectedDish.ingredients" class="modal-ingredients-wrapper">
+              <h4 class="modal-ingredients-title">{{ $t('menu.ingredients') }}:</h4>
+              <p class="modal-ingredients">{{ selectedDish.ingredients[$i18n.locale] }}</p>
+            </div>
             
             <div class="modal-footer">
               <span class="modal-price">{{ selectedDish.price }}tg</span>
@@ -476,7 +481,27 @@ onMounted(async () => {
   font-size: 1.05rem;
   color: var(--color-text-main);
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-ingredients-wrapper {
   margin-bottom: 2rem;
+}
+
+.modal-ingredients-title {
+  font-family: var(--font-header);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modal-ingredients {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+  opacity: 0.8;
 }
 
 .modal-footer {
