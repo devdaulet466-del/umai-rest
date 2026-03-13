@@ -2,18 +2,18 @@
   <div class="menu container mt-4">
     <div class="search-bar mb-4">
       <div class="search-input-group">
-        <input type="text" :placeholder="$t('menu.search')" class="search-input" />
-        <button class="btn btn-search">{{ $t('menu.search_btn') }}</button>
+        <input type="text" v-model="searchQuery" :placeholder="$t('menu.search')" class="search-input" />
+        <button class="btn btn-search" @click="searchQuery = ''" v-if="searchQuery">✕</button>
       </div>
     </div>
 
     <div v-if="loading" class="text-center mt-8">Loading menu...</div>
     <div v-else>
       <!-- Special Menu Section -->
-      <section v-if="specialMenu" class="special-menu-section mb-8">
-        <h2 class="category-title">{{ specialMenu.name[$i18n.locale] }}</h2>
+      <section v-if="filteredSpecialMenu && filteredSpecialMenu.items.length > 0" class="special-menu-section mb-8">
+        <h2 class="category-title">{{ filteredSpecialMenu.name[$i18n.locale] }}</h2>
         <div class="special-menu-scroll">
-          <div v-for="item in specialMenu.items" :key="item.id" class="menu-card special-card" @click="openModal(item)">
+          <div v-for="item in filteredSpecialMenu.items" :key="item.id" class="menu-card special-card" @click="openModal(item)">
             <div class="img-wrapper">
               <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" />
             </div>
@@ -55,27 +55,29 @@
       </div>
 
       <!-- Subcategories of the selected category -->
-      <div v-for="cat in displayedCategories" :key="cat.id">
+      <div v-for="cat in filteredDisplayedCategories" :key="cat.id">
         <!-- Optional: Show Category Title if ALL is selected to separate them visually -->
         <h2 v-if="selectedCategory === 'all'" class="category-title mt-8 mb-4" style="text-align: left; font-size: 2rem;">{{ cat.name[$i18n.locale] }}</h2>
         
         <section v-for="sub in cat.subcategories" :key="sub.id" class="subcategory-section mb-8">
-          <h3 class="subcategory-title">{{ sub.name[$i18n.locale] }}</h3>
-          
-          <div class="menu-grid mt-4">
-            <div v-for="item in sub.items" :key="item.id" class="menu-card" @click="openModal(item)">
-              <div class="img-wrapper">
-                <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" />
-              </div>
-              <div class="card-content mt-4">
-                <h4 class="item-name">{{ item.name[$i18n.locale] }}</h4>
-                <p v-if="item.description" class="item-desc">{{ item.description[$i18n.locale] }}</p>
-                
-                <div class="card-footer mt-4">
-                  <span class="price">{{ item.price }}tg</span>
-                  <button @click.stop="addToCart(item)" class="btn-add">
-                    {{ $t('menu.add_to_cart') }}
-                  </button>
+          <div v-if="sub.items.length > 0">
+            <h3 class="subcategory-title">{{ sub.name[$i18n.locale] }}</h3>
+            
+            <div class="menu-grid mt-4">
+              <div v-for="item in sub.items" :key="item.id" class="menu-card" @click="openModal(item)">
+                <div class="img-wrapper">
+                  <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" />
+                </div>
+                <div class="card-content mt-4">
+                  <h4 class="item-name">{{ item.name[$i18n.locale] }}</h4>
+                  <p v-if="item.description" class="item-desc">{{ item.description[$i18n.locale] }}</p>
+                  
+                  <div class="card-footer mt-4">
+                    <span class="price">{{ item.price }}tg</span>
+                    <button @click.stop="addToCart(item)" class="btn-add">
+                      {{ $t('menu.add_to_cart') }}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,6 +133,7 @@ const specialMenu = ref(null)
 const loading = ref(true)
 const selectedCategory = ref('all')
 const selectedDish = ref(null)
+const searchQuery = ref('')
 
 const openModal = (item) => {
   selectedDish.value = item
@@ -148,6 +151,42 @@ const displayedCategories = computed(() => {
   }
   const activeCat = categories.value.find(c => c.id === selectedCategory.value)
   return activeCat ? [activeCat] : []
+})
+
+// Search logic
+const searchMatches = (item) => {
+  if (!searchQuery.value) return true;
+  const query = searchQuery.value.toLowerCase();
+  
+  // Search in names across all 3 languages
+  for (const lang of ['en', 'ru', 'kk']) {
+    if (item.name && item.name[lang] && item.name[lang].toLowerCase().includes(query)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+const filteredSpecialMenu = computed(() => {
+  if (!specialMenu.value) return null;
+  if (!searchQuery.value) return specialMenu.value;
+
+  const filteredItems = specialMenu.value.items.filter(searchMatches);
+  return { ...specialMenu.value, items: filteredItems };
+})
+
+const filteredDisplayedCategories = computed(() => {
+  if (!searchQuery.value) return displayedCategories.value;
+  
+  // Deep filter categories -> subcategories -> items
+  return displayedCategories.value.map(cat => {
+    const filteredSubs = cat.subcategories.map(sub => {
+      const filteredItems = sub.items.filter(searchMatches);
+      return { ...sub, items: filteredItems };
+    }).filter(sub => sub.items.length > 0); // Only keep subcats that have matching items
+    
+    return { ...cat, subcategories: filteredSubs };
+  }).filter(cat => cat.subcategories.length > 0); // Only keep cats that have matching subcats
 })
 
 onMounted(async () => {

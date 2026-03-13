@@ -58,6 +58,7 @@
            
            <a href="https://wa.me/" target="_blank" class="drawer-link social">{{ $t('nav.whatsapp') }}</a>
            <a href="https://instagram.com/" target="_blank" class="drawer-link social">{{ $t('nav.instagram') }}</a>
+           <a href="https://go.2gis.com/6rdXT" target="_blank" class="drawer-link social" style="margin-top: 1rem;">{{ $t('nav.location') }}</a>
         </div>
       </nav>
     </transition>
