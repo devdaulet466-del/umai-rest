@@ -104,9 +104,9 @@
           <div class="modal-body">
             <h2 class="modal-title">{{ selectedDish.name[$i18n.locale] }}</h2>
             <p v-if="selectedDish.weight" class="modal-weight">{{ selectedDish.weight }}</p>
-            <p v-if="selectedDish.description" class="modal-desc">{{ selectedDish.description[$i18n.locale] }}</p>
+            <p v-if="selectedDish.description && selectedDish.description[$i18n.locale]" class="modal-desc">{{ selectedDish.description[$i18n.locale] }}</p>
 
-            <div v-if="selectedDish.ingredients" class="modal-ingredients-wrapper">
+            <div v-if="selectedDish.ingredients && selectedDish.ingredients[$i18n.locale]" class="modal-ingredients-wrapper">
               <h4 class="modal-ingredients-title">{{ $t('menu.ingredients') }}:</h4>
               <p class="modal-ingredients">{{ selectedDish.ingredients[$i18n.locale] }}</p>
             </div>

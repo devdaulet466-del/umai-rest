@@ -6,7 +6,7 @@
       
       <div class="showcase">
         <!-- Using a placeholder promo image from assets -->
-        <img :src="'/images/foodImages/IMG_1469.JPG'" alt="Showcase" class="hero-image" />
+        <img :src="'/images/foodImages/banner.webp'" alt="Showcase" class="hero-image" />
       </div>
 
       <router-link to="/menu" class="btn mt-8">
