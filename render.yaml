@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: umai-rest-backend
+    env: python
+    region: frankfurt
+    plan: free
+    repo: https://github.com/devdaulet466-del/umai-rest
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
