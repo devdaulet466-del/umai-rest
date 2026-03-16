@@ -191,7 +191,7 @@ const filteredDisplayedCategories = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://localhost:8000/api/menu')
+    const response = await fetch('https://umai-rest-backend.onrender.com/api/menu')
     const data = await response.json()
     categories.value = data.categories
     specialMenu.value = data.special_menu

@@ -57,7 +57,7 @@ async function submitCheckout() {
       total_price: cartTotal.value,
       comment: "Frontend checkout"
     }
-    const res = await fetch('http://localhost:8000/api/checkout', {
+    const res = await fetch('https://umai-rest-backend.onrender.com/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
