@@ -47,7 +47,7 @@ class Dish(Base):
     description = Column(JSON, nullable=True)
     ingredients = Column(JSON, nullable=True)
     
-    price = Column(Float, nullable=False)
+    price = Column(Float, nullable=True)
     weight = Column(String, nullable=True)
     image = Column(String, nullable=True)
     
@@ -55,6 +55,7 @@ class Dish(Base):
 
     def __str__(self):
         try:
-            return self.name.get('ru', self.name.get('en', 'Dish at %f' % self.price))
+            price_str = 'at %f' % self.price if self.price is not None else 'without price'
+            return self.name.get('ru', self.name.get('en', 'Dish %s' % price_str))
         except AttributeError:
             return "Dish"

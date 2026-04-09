@@ -1,4 +1,4 @@
-services:
+fffservices:
   - type: web
     name: umai-rest-backend
     env: python
