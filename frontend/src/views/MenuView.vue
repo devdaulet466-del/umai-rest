@@ -15,15 +15,15 @@
         <div class="special-menu-scroll">
           <div v-for="item in filteredSpecialMenu.items" :key="item.id" class="menu-card special-card" @click="openModal(item)">
             <div class="img-wrapper">
-              <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" />
+              <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" loading="lazy" />
             </div>
             <div class="card-content mt-4">
               <h3 class="item-name">{{ item.name[$i18n.locale] }}</h3>
               <p v-if="item.description" class="item-desc">{{ item.description[$i18n.locale] }}</p>
               
               <div class="card-footer mt-4">
-                <span class="price">{{ item.price }}tg</span>
-                <button @click.stop="addToCart(item)" class="btn-add">
+                <span v-if="item.price" class="price">{{ item.price }}tg</span>
+                <button v-if="item.price" @click.stop="addToCart(item)" class="btn-add">
                   {{ $t('menu.add_to_cart') }}
                 </button>
               </div>
@@ -66,15 +66,15 @@
             <div class="menu-grid mt-4">
               <div v-for="item in sub.items" :key="item.id" class="menu-card" @click="openModal(item)">
                 <div class="img-wrapper">
-                  <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" />
+                  <img :src="`/${item.image}`" :alt="item.name[$i18n.locale]" loading="lazy" />
                 </div>
                 <div class="card-content mt-4">
                   <h4 class="item-name">{{ item.name[$i18n.locale] }}</h4>
                   <p v-if="item.description" class="item-desc">{{ item.description[$i18n.locale] }}</p>
                   
                   <div class="card-footer mt-4">
-                    <span class="price">{{ item.price }}tg</span>
-                    <button @click.stop="addToCart(item)" class="btn-add">
+                    <span v-if="item.price" class="price">{{ item.price }}tg</span>
+                    <button v-if="item.price" @click.stop="addToCart(item)" class="btn-add">
                       {{ $t('menu.add_to_cart') }}
                     </button>
                   </div>
@@ -98,7 +98,7 @@
           </button>
           
           <div class="modal-img-wrapper">
-            <img :src="`/${selectedDish.image}`" :alt="selectedDish.name[$i18n.locale]" />
+            <img :src="`/${selectedDish.image}`" :alt="selectedDish.name[$i18n.locale]" loading="lazy" />
           </div>
           
           <div class="modal-body">
@@ -112,8 +112,8 @@
             </div>
             
             <div class="modal-footer">
-              <span class="modal-price">{{ selectedDish.price }}tg</span>
-              <button @click="addToCart(selectedDish); closeModal()" class="btn-add modal-btn-add">
+              <span v-if="selectedDish.price" class="modal-price">{{ selectedDish.price }}tg</span>
+              <button v-if="selectedDish.price" @click="addToCart(selectedDish); closeModal()" class="btn-add modal-btn-add">
                 {{ $t('menu.add_to_cart') }}
               </button>
             </div>
@@ -191,8 +191,42 @@ const filteredDisplayedCategories = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await fetch('https://umai-rest-backend.onrender.com/api/menu')
-    const data = await response.json()
+    // 1. Check local storage for instant loading (Option 2)
+    const cachedMenu = localStorage.getItem('umaiMenuCache')
+    if (cachedMenu) {
+      const parsed = JSON.parse(cachedMenu)
+      categories.value = parsed.categories
+      specialMenu.value = parsed.special_menu
+      if (categories.value.length > 0 && selectedCategory.value === '') {
+        selectedCategory.value = 'all'
+      }
+      loading.value = false // render immediately
+    }
+
+    let data;
+    if (import.meta.env.DEV) {
+      // In development mode, fetch from the local FastAPI backend
+      const response = await fetch('http://127.0.0.1:8000/api/menu').catch(() => null)
+      if (response && response.ok) {
+        data = await response.json()
+      } else {
+        throw new Error("Local backend isn't running or accessible.")
+      }
+    } else {
+      // 2. Fetch fresh static JSON from our Plesk host (Option 3) 
+      // This file will be generated automatically whenever the Admin panel updates
+      const response = await fetch('/menu.json').catch(() => null)
+      
+      const isJson = response && response.headers.get('content-type')?.includes('application/json')
+      if (response && response.ok && isJson) {
+         data = await response.json()
+      } else {
+         // fallback to Render API if menu.json doesn't exist yet
+         const fallback = await fetch('https://umai-rest-backend.onrender.com/api/menu')
+         data = await fallback.json()
+      }
+    }
+    
     categories.value = data.categories
     specialMenu.value = data.special_menu
     
@@ -200,6 +234,10 @@ onMounted(async () => {
     if (categories.value.length > 0 && selectedCategory.value === '') {
       selectedCategory.value = 'all'
     }
+
+    // 3. Update the local cache silently
+    localStorage.setItem('umaiMenuCache', JSON.stringify(data))
+
   } catch (error) {
     console.error("Failed to load menu", error)
   } finally {
