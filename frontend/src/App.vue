@@ -56,9 +56,9 @@
            
            <div class="drawer-divider"></div>
            
-           <a href="https://wa.me/" target="_blank" class="drawer-link social">{{ $t('nav.whatsapp') }}</a>
-           <a href="https://instagram.com/" target="_blank" class="drawer-link social">{{ $t('nav.instagram') }}</a>
-           <a href="https://go.2gis.com/6rdXT" target="_blank" class="drawer-link social" style="margin-top: 1rem;">{{ $t('nav.location') }}</a>
+           <a href="https://api.whatsapp.com/send/?phone=77058888825&text=Здравствуйте!%0A%0AХочу+заказать+блюдо.%0A%0A&type=phone_number&app_absent=0" target="_blank" class="drawer-link social">{{ $t('nav.whatsapp') }}</a>
+           <a href="https://www.instagram.com/umai.rest.ala" target="_blank" class="drawer-link social">{{ $t('nav.instagram') }}</a>
+           <a href="https://2gis.kz/almaty/search/umai/firm/70000001081556141/76.939384%2C43.226496?m=76.891229%2C43.215988%2F12.01" target="_blank" class="drawer-link social" style="margin-top: 1rem;">{{ $t('nav.location') }}</a>
         </div>
       </nav>
     </transition>
@@ -106,6 +106,7 @@ const isSideMenuOpen = ref(false)
 .burger-menu {
   color: var(--color-accent);
   cursor: pointer;
+  padding-right: 25px;
 }
 
 .logo-link {
