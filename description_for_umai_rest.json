@@ -1,0 +1,338 @@
+[
+  {
+    "food_id": 1,
+    "description": {
+      "kk": "Матбуха соусы, черри томаттары, индейка және питанмен ұсынылатын екі жұмыртқадан жасалған дәстүрлі шакшука.",
+      "ru": "Традиционная шакшука из двух яиц в соусе матбуха с копчеными черри и индейкой су-вид. Подается с питой.",
+      "en": "Traditional shakshuka with two eggs in matbuha sauce, smoked cherry tomatoes, and turkey. Served with pita."
+    }
+  },
+  {
+    "food_id": 2,
+    "description": {
+      "kk": "Матбуха соусындағы үш жұмыртқадан жасалған скрэмбл, қазы, томаттар, қызыл пияз және қыша питанмен.",
+      "ru": "Скрэмбл из 3 яиц в соусе матбуха с казы, дольками свежих помидоров, красным луком и миксом салата с питой.",
+      "en": "Scrambled eggs (3 pcs) in matbuha sauce with kazy, fresh tomatoes, red onion, salad mix, and pita."
+    }
+  },
+  {
+    "food_id": 3,
+    "description": {
+      "kk": "Майға қуырылған креветкалар қосылған нәзік скрэмбл, пармезан мусы, жаңа піскен көк шөптер және питанмен.",
+      "ru": "Нежный сливочный скрэмбл с обжаренными креветками, воздушным муссом из пармезана и зеленью. Подается с питой.",
+      "en": "Creamy scrambled eggs with sautéed shrimps, light parmesan mousse, and fresh greens. Served with pita."
+    }
+  },
+  {
+    "food_id": 12,
+    "description": {
+      "kk": "Киноа, креветкалар, черри томаттары, қияр, жұмыртқа және азиялық тұздық қосылған пайдалы боул.",
+      "ru": "Полезный боул с киноа, отварными креветками, огурцами, черри, яйцами всмятку и пикантной азиатской заправкой.",
+      "en": "Healthy bowl with quinoa, boiled shrimps, cucumbers, cherry tomatoes, soft-boiled eggs, and Asian dressing."
+    }
+  },
+  {
+    "food_id": 6,
+    "description": {
+      "kk": "Скрэмбл, страчателла, ысталған сәмбі еті, коул слоу, үй қаймағы және гречка наны қосылған таңғы ас.",
+      "ru": "Сытный завтрак со скрэмблом, страчателлой, копченой семгой, коул слоу, домашней сметаной и гречишным хлебом.",
+      "en": "Hearty breakfast with scrambled eggs, stracciatella, smoked salmon, coleslaw, sour cream, and buckwheat bread."
+    }
+  },
+  {
+    "food_id": 10,
+    "description": {
+      "kk": "Шырынды бифштекс, қуырылған жұмыртқа, демиглас соусы, шампиньондар, картоп дипперлері және тартин наны.",
+      "ru": "Фирменный завтрак с сочной котлетой под соусом демиглас, глазуньей, грибами, дипперами и тартином.",
+      "en": "Signature Umai breakfast with beefsteak under demi-glace sauce, fried egg, mushrooms, dippers, and tartine."
+    }
+  },
+  {
+    "food_id": 11,
+    "description": {
+      "kk": "Шпинат панкейктері, крем-чиз, тұздалған сәмбі еті, пашот жұмыртқасы және жаңа піскен қияр таспалары.",
+      "ru": "Шпинатные панкейки с нежным крем-чизом, слабосоленой семгой, яйцом пашот и лентами свежего огурца.",
+      "en": "Spinach pancakes layered with cream cheese, mild salmon, poached egg, and fresh cucumber ribbons."
+    }
+  },
+  {
+    "food_id": 13,
+    "description": {
+      "kk": "Фритюрде қуырылған қытырлақ тауық филесі, Ромейн салаты және чипотле тұздығы қосылған тост-сэндвич.",
+      "ru": "Сэндвич из обжаренных тостов с хрустящим куриным филе во фритюре, салатом Ромейн и пикантным соусом чипотле.",
+      "en": "Crispy deep-fried chicken fillet sandwich with Romaine lettuce and spicy chipotle sauce on toasted bread."
+    }
+  },
+  {
+    "food_id": 14,
+    "description": {
+      "kk": "Пеште моцарелла ірімшігімен пісірілген сиыр еті ветчинасы қосылған тост, үстіне қуырылған жұмыртқа салынады.",
+      "ru": "Запеченный тост с говяжьей ветчиной под нежной массой из моцареллы и сливок, увенчанный яичницей-глазуньей.",
+      "en": "Baked toast with beef ham and melted mozzarella cream, topped with a sunny-side-up fried egg."
+    }
+  },
+  {
+    "food_id": 7,
+    "description": {
+      "kk": "Қуырылған тартин наны, пепероната, маринадталған тунец кубиктері, бөдене жұмыртқасы және винегрет тұздығы.",
+      "ru": "Открытый сэндвич на тартине с пеперонатой, маринованным тунцом, перепелиными яйцами и соусом винегрет.",
+      "en": "Open-face tartine sandwich with peperonata, marinated tuna cubes, quail eggs, and vinaigrette dressing."
+    }
+  },
+  {
+    "food_id": 15,
+    "description": {
+      "kk": "Жылы круассан, езілген авокадо, страчателла ірімшігі және лимон тұздығы қосылған әлсіз тұздалған сәмбі.",
+      "ru": "Теплый круассан с мятым авокадо, нежной страчателлой, слабосоленой семгой и лимонной заправкой.",
+      "en": "Warm croissant filled with mashed avocado, soft stracciatella, mild salmon, and lemon dressing."
+    }
+  },
+  {
+    "food_id": 8,
+    "description": {
+      "kk": "Үйде жасалған заварной креммен қабатталған, жаңа піскен жидектермен безендірілген үлпілдек панкейктер.",
+      "ru": "Пышные панкейки с нежным заварным кремом, политые ароматным ягодным кули и украшенные свежими живыми ягодами.",
+      "en": "Fluffy pancakes layered with rich custard, drizzled with berry coulis and topped with fresh berries."
+    }
+  },
+  {
+    "food_id": 9,
+    "description": {
+      "kk": "Ыстық пеште пісірілген кілегейлі ірімшік сырниктері, қаймақ, жидектер және тәтті жидек кулиімен ұсынылады.",
+      "ru": "Нежные сырники из топленого творога, запеченные до готовности. Подаются со сметаной и сочными ягодами.",
+      "en": "Baked melted cottage cheese syrniki. Served with thick sour cream, fresh berries, and sweet coulis."
+    }
+  },
+  {
+    "food_id": 17,
+    "description": {
+      "kk": "Сүтте пісірілген күріш пен сұлы жармасы ботқасы, ванильді балмұздақ және жаңа піскен жидектермен.",
+      "ru": "Нежная молочная каша из риса и пшена со сливочным маслом, подается с шариком ванильного мороженого и ягодами.",
+      "en": "Creamy milk porridge made of rice and millet, topped with a scoop of vanilla ice cream and fresh berries."
+    }
+  },
+  {
+    "food_id": 18,
+    "description": {
+      "kk": "Сүттегі тары ботқасы, кондитерлік заварной крем, ұлттық жент, фисташкалар және кокос слайстарымен.",
+      "ru": "Пшенная каша (тары) на молоке с нежным заварным кремом, аутентичным жентом, фисташками и кокосовыми чипсами.",
+      "en": "Millet porridge (tary) on milk topped with sweet custard, authentic zhent, pistachios, and coconut chips."
+    }
+  },
+  {
+    "food_id": 16,
+    "description": {
+      "kk": "Су мен сүтте пісірілген сұлы жармасы, үстіне вишня конфитюрі және бадам ұнтағы себіледі.",
+      "ru": "Классическая мультизлаковая каша на молоке со сливочным маслом, украшенная вишневым конфитюром и фисташковой пудрой.",
+      "en": "Classic multigrain porridge on milk with butter, topped with sour cherry confiturn and pistachio powder."
+    }
+  },
+  {
+    "food_id": 20,
+    "description": {
+      "kk": "Қияр, томат, бұрыш, үйде жасалған брынза, зәйтүн және қызыл пияздан жасалған ірі туралған грек салаты.",
+      "ru": "Классический греческий салат с крупно нарезанными овощами, брынзой, маслинами, луком и заправкой. С питой.",
+      "en": "Greek salad with roughly chopped vegetables, traditional brynza cheese, olives, and lemon dressing. With pita."
+    }
+  },
+  {
+    "food_id": 24,
+    "description": {
+      "kk": "Крахмалда қуырылған қытырлақ баклажандар, қуырылған брынза, свит чили соусы және жаңа піскен кинза.",
+      "ru": "Хрустящие баклажаны во фритюре и жареная брынза в сладком соусе чили со свежими томатами черри и кинзой.",
+      "en": "Crispy deep-fried eggplants and fried brynza cheese in sweet chili sauce with cherry tomatoes and cilantro."
+    }
+  },
+  {
+    "food_id": 102,
+    "description": {
+      "kk": "Азиялық тұздықтағы жеңіл қуырылған тунец, піскен манго, авокадо, черри томаттары және манго тұздығы.",
+      "ru": "Боул с обжаренным в кунжуте тунцом, полосками спелого манго, авокадо и черри под манговой заправкой.",
+      "en": "Bowl with sesame-crusted seared tuna, ripe mango slices, avocado, and cherry tomatoes with mango dressing."
+    }
+  },
+  {
+    "food_id": 100,
+    "description": {
+      "kk": "Манго тұздығы құйылған микс салат, көгілдір ірімшік (Блю чиз) кесектері, алмұрт және грек жаңғағы.",
+      "ru": "Изысканный салат с миксом зелени, крупными кусочками сыра блю чиз, дольками груши и грецким орехом.",
+      "en": "Gourmet salad featuring mixed greens, large chunks of blue cheese, fresh pear slices, and walnuts."
+    }
+  },
+  {
+    "food_id": 23,
+    "description": {
+      "kk": "Жылқы еті, ысталған қызанақ, маринадталған қияр, піскен бұрыш және ысталған брынза қосылған салат.",
+      "ru": "Сытный салат с сочной кониной, копчеными томатами, маринованными огурцами, перцем и крошеной брынзой.",
+      "en": "Savory salad with tender horse meat, smoked tomatoes, pickles, baked bell pepper, and crumbled brynza."
+    }
+  },
+  {
+    "food_id": 101,
+    "description": {
+      "kk": "Романо салатының жапырақтары, су-вид әдісімен пісірілген тауық филесі, цезарь тұздығы және пармезан.",
+      "ru": "Классический Цезарь с крупными листьями Романо, нежной индейкой/курицей су-вид, сухариками и пармезаном.",
+      "en": "Classic Caesar with whole Romaine leaves, tender chicken sous-vide, crunchy croutons, and shredded parmesan."
+    }
+  },
+  {
+    "food_id": 25,
+    "description": {
+      "kk": "Осьминог, кальмар, гребешок, мидия және сәмбі еті қосылған, сарымсақ пен зәйтүн майындағы теңіз өнімдері.",
+      "ru": "Ассорти из осьминога, кальмаров, гребешка, мидий и семги, обжаренных в чесночном масле с петрушкой. С хлебом.",
+      "en": "Sautéed seafood mix of octopus, squid, scallops, mussels, and salmon with garlic oil and bread."
+    }
+  },
+  {
+    "food_id": 28,
+    "description": {
+      "kk": "Пицца негізіндегі үш түрлі брускетта: сәмбі етімен, страчателламен және суджук пен пеперонатамен.",
+      "ru": "Ассорти брускетт на хрустящей основе пиццы: с семгой и крем-чизом, со страчателлой и песто, с суджуком.",
+      "en": "Assorted bruschettas on a crispy pizza base: with salmon, with stracciatella-pesto, and with sujuk."
+    }
+  },
+  {
+    "food_id": 104,
+    "description": {
+      "kk": "Қытырлақ тауық қанаттары, сарымсақты бородин наны және фритюрдегі креветкалар. Екі түрлі соуспен ұсынылады.",
+      "ru": "Пивной сет: крылышки в свит чили, гренки из бородинского хлеба с чесноком, креветки во фритюре и два соуса.",
+      "en": "Beer platter: sweet chili chicken wings, garlic Borodinsky croutons, deep-fried shrimps, and two sauces."
+    }
+  },
+  {
+    "food_id": 103,
+    "description": {
+      "kk": "Суық ысталған және әлсіз тұздалған сәмбі кесектері, ысталған қаймақ, маринадталған қияр және тартин наны.",
+      "ru": "Рыбная тарелка из семги холодного копчения и слабосоленой семги с копченой сметаной, огурцами и хлебом.",
+      "en": "Fish platter featuring cold-smoked and mild salmon served with smoked sour cream, pickles, and tartine."
+    }
+  },
+  {
+    "food_id": 37,
+    "description": {
+      "kk": "Фритюрде қуырылған қытырлақ тауық шницелі, пармезан себілген жаңа піскен көкөністер және лимон тілімі.",
+      "ru": "Хрустящий куриный шницель во фритюре, подается с миксом салата, свежими огурцами, черри и пармезаном.",
+      "en": "Crispy deep-fried chicken schnitzel, served with mixed salad, fresh cucumbers, cherry tomatoes, and parmesan."
+    }
+  },
+  {
+    "food_id": 32,
+    "description": {
+      "kk": "Грильде қуырылған индейка филесі, пепероната гарнирі, зәйтүн майы құйылған салат және кедровые орехи.",
+      "ru": "Сочное филе индейки на гриле с пикантной теплой пепероната и миксом салата с кедровыми орешками.",
+      "en": "Juicy grilled turkey fillet served with warm peperonata, fresh salad mix, and pine nuts."
+    }
+  },
+  {
+    "food_id": 40,
+    "description": {
+      "kk": "Терияки соусымен пеште пісірілген лосось стейгі, гамадари соусындағы брокколи және лимон.",
+      "ru": "Запеченный стейк из лосося в соусе терияки, подается с отварной брокколи на нежном соусе гамадари.",
+      "en": "Baked salmon steak glazed with teriyaki sauce, served with boiled broccoli over nutty gamadari sauce."
+    }
+  },
+  {
+    "food_id": 31,
+    "description": {
+      "kk": "Нәзік толық пісірілген сиыр етінің жақтары (щечки), картоп пюресі және қою демиглас соусы.",
+      "ru": "Нежнейшие томленые говяжьи щечки, подаются на подушке из картофельного пюре с густым соусом демиглас.",
+      "en": "Tender slow-cooked beef cheeks served over smooth mashed potatoes with rich demi-glace sauce."
+    }
+  },
+  {
+    "food_id": 33,
+    "description": {
+      "kk": "Шырынды котлет, ерітілген моцарелла, ысталған жая, көкөністер, коул слоу және картоп дипперлері қосылған бургер.",
+      "ru": "Фирменный бургер с котлетой, сыром, копченой жая и соусом чипотле. Подается с коул слоу и картофелем диппер.",
+      "en": "Signature burger with beef patty, mozzarella, smoked zhaya, and chipotle sauce. Served with dippers."
+    }
+  },
+  {
+    "food_id": 62,
+    "description": {
+      "kk": "Креветка, мидия, кальмар және сәмбі еті қосылған ащы қышқыл том ям сорпасы. Күрішпен және лайммен ұсынылады.",
+      "ru": "Острый суп том ям с креветками, мидиями, кальмарами, семгой и грибами. Подается с порцией отварного риса.",
+      "en": "Spicy Thai soup with shrimps, mussels, squid, salmon, and mushrooms. Served with a side of white rice."
+    }
+  },
+  {
+    "food_id": 63,
+    "description": {
+      "kk": "Кремді сәбіз-імбір сорпасы, қуырылған креветкалар, кокос сүті және қытырлақ кокос слайстары.",
+      "ru": "Нежный пряный суп из моркови и имбиря, украшенный жаренными креветками, кокосовым молоком и чипсами.",
+      "en": "Velvety carrot-ginger cream soup topped with pan-seared shrimps, coconut milk, and crunchy coconut chips."
+    }
+  },
+  {
+    "food_id": 64,
+    "description": {
+      "kk": "Піскен сиыр еті, ірі туралған сәбіз және картоп қосылған мөлдір, нәрлі говяжий сорпа.",
+      "ru": "Традиционный наваристый и прозрачный говяжий бульон с отварным мясом, крупной морковью и картофелем.",
+      "en": "Traditional rich and clear beef broth loaded with tender boiled beef, large chunks of carrots, and potatoes."
+    }
+  },
+  {
+    "food_id": 84,
+    "description": {
+      "kk": "Кілегейлі демиглас соусында қуырылған сиыр етінің кесектері, нәзік картоп пюресімен бірге.",
+      "ru": "Классический бефстроганов из нежной говяжьей вырезки в соусе из сливок и демигласа с картофельным пюре.",
+      "en": "Classic beef stroganoff strips in a creamy demi-glace sauce, served over smooth mashed potatoes."
+    }
+  },
+  {
+    "food_id": 82,
+    "description": {
+      "kk": "Балаларға арналған қытырлақ тауық наггетстері, жаңа піскен қияр тілімдері және томат кетчупімен.",
+      "ru": "Хрустящие домашние куриные наггетсы в панировке, подаются со свежими огурцами и томатным кетчупом.",
+      "en": "Crispy homemade chicken nuggets in breadcrumbs, served with fresh sliced cucumbers and ketchup."
+    }
+  },
+  {
+    "food_id": 81,
+    "description": {
+      "kk": "Кілегейлі соустағы феттучини пастасы, мортаделла шұжығы және үгітілген пармезан ірімшігі.",
+      "ru": "Итальянская паста феттучини в насыщенном сливочном соусе с обжаренной мортаделлой и пармезаном.",
+      "en": "Italian fettuccine pasta in a rich cream sauce tossed with savory mortadella slices and parmesan."
+    }
+  },
+  {
+    "food_id": 50,
+    "description": {
+      "kk": "Болон соусымен, сары маймен және хош иісті пармезанмен араластырылған классикалық паста.",
+      "ru": "Классическая паста с густым мясным соусом болоньезе, сливочным маслом, пармезаном и микрозеленью.",
+      "en": "Classic pasta combined with rich beef bolognese sauce, tossed with butter and plenty of parmesan."
+    }
+  },
+  {
+    "food_id": 54,
+    "description": {
+      "kk": "Зәйтүн майы қосылған паста, жаңа піскен тунец тартары, страчателла ірімшігі және томаттар.",
+      "ru": "Паста с нежной страчателлой и свежим тар-таром из замаринованного тунца с кубиками томатов.",
+      "en": "Pasta topped with soft stracciatella and fresh marinated tuna tartare mixed with diced tomatoes."
+    }
+  },
+  {
+    "food_id": 52,
+    "description": {
+      "kk": "Қуырылған креветкалар, томатты песто соусы, кілегей және жаңа піскен микрозелень қосылған паста.",
+      "ru": "Паста с обжаренными креветками в нежных сливках с добавлением ароматного томатного песто и зелени.",
+      "en": "Pasta with sautéed shrimps in a smooth cream sauce enhanced with rich sun-dried tomato pesto."
+    }
+  },
+  {
+    "food_id": 70,
+    "description": {
+      "kk": "Томат соусы, моцарелла ірімшігі, ысталған қызанақтар, базилик және жасыл май қосылған классикалық пицца.",
+      "ru": "Пицца Маргарита с фирменным томатным соусом, тягучей моцареллой, вялеными томатами и базиликом.",
+      "en": "Pizza Margherita topped with tomato sauce, melted mozzarella, sun-dried tomatoes, and fresh basil."
+    }
+  },
+  {
+    "food_id": 76,
+    "description": {
+      "kk": "Соус, моцарелла және хош иісті қою етті Болоньезе соусы салынған тойымды пицца.",
+      "ru": "Мясная пицца с начинкой из густого соуса Болоньезе, сыра моцарелла, базилика и ароматного зеленого масла.",
+      "en": "Hearty meat pizza loaded with rich bolognese sauce, mozzarella, fresh basil, and herb oil."
+    }
+  }
+]
